@@ -63,28 +63,32 @@
             margin-left: 20px;
         }
         .systems {
-            display: block; /* Alinea los elementos uno debajo del otro */
+            display: block;
         }
         .system-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin: 10px 0;
             padding: 15px;
             border: 1px solid #c2f373;
             border-radius: 5px;
             background-color: #84d107;
             color: #4c1396;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             transition: background-color 0.3s, transform 0.3s;
         }
         .system-item:hover {
             background-color: #a6e32d;
             transform: translateY(-5px);
         }
-        .img-container img {
+        .system-item-text {
+            flex: 1;
+            text-align: left;
+        }
+        .system-item img {
             width: 50px;
-            margin-left: 10px;
             flex-shrink: 0;
+            margin-left: 15px;
         }
         .creador {
             text-align: center;
@@ -94,12 +98,20 @@
         @media (max-width: 768px) {
             .section {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center; /* Centra los elementos de la sección */
             }
             .section img {
-                margin: 10px 0;
+                margin: 10px 0; /* Centra las imágenes */
                 width: 100px;
                 max-width: 100%;
+            }
+            .system-item {
+                flex-direction: column;
+                align-items: center; /* Centra los elementos en pantallas pequeñas */
+            }
+            .system-item img {
+                margin-top: 10px;
+                margin-left: 0;
             }
             h1 {
                 font-size: 24px;
@@ -118,6 +130,9 @@
             }
             .section img {
                 width: 80px;
+            }
+            .system-item img {
+                margin: 10px 0;
             }
             h1 {
                 font-size: 20px;
@@ -197,34 +212,34 @@
                 <h2>6. Sistemas de Gestión de Bases de Datos más Conocidos</h2>
                 <div class="systems">
                     <div class="system-item">
-                        <strong>Oracle</strong>: Estable y con soporte para transacciones complejas.
-                        <div class="img-container">
-                            <img src="Imagenes/oracle.png" alt="Icono de Oracle">
+                        <div class="system-item-text">
+                            <strong>Oracle</strong>: Estable y con soporte para transacciones complejas.
                         </div>
+                        <img src="Imagenes/oracle.png" alt="Icono de Oracle">
                     </div>
                     <div class="system-item">
-                        <strong>Microsoft SQL Server</strong>: Integración con el ecosistema de Microsoft.
-                        <div class="img-container">
-                            <img src="Imagenes/servidor-sql.png" alt="Icono de SQL Server">
+                        <div class="system-item-text">
+                            <strong>Microsoft SQL Server</strong>: Integración con el ecosistema de Microsoft.
                         </div>
+                        <img src="Imagenes/servidor-sql.png" alt="Icono de SQL Server">
                     </div>
                     <div class="system-item">
-                        <strong>MySQL</strong>: Popular en aplicaciones web, de código abierto.
-                        <div class="img-container">
-                            <img src="Imagenes/mysql.png" alt="Icono de MySQL">
+                        <div class="system-item-text">
+                            <strong>MySQL</strong>: Popular en aplicaciones web, de código abierto.
                         </div>
+                        <img src="Imagenes/mysql.png" alt="Icono de MySQL">
                     </div>
                     <div class="system-item">
-                        <strong>Informix</strong>: Eficiencia en grandes volúmenes de datos.
-                        <div class="img-container">
-                            <img src="Imagenes/informix.webp" alt="Icono de Informix">
+                        <div class="system-item-text">
+                            <strong>Informix</strong>: Eficiencia en grandes volúmenes de datos.
                         </div>
+                        <img src="Imagenes/informix.webp" alt="Icono de Informix">
                     </div>
                     <div class="system-item">
-                        <strong>DB2</strong>: Usado por IBM en aplicaciones empresariales de gran escala.
-                        <div class="img-container">
-                            <img src="Imagenes/db2.png" alt="Icono de DB2">
+                        <div class="system-item-text">
+                            <strong>DB2</strong>: Usado por IBM en aplicaciones empresariales de gran escala.
                         </div>
+                        <img src="Imagenes/db2.png" alt="Icono de DB2">
                     </div>
                 </div>
             </div>
